@@ -1,0 +1,527 @@
+/* default font style is arial for the whole page */
+body {
+  font-family: Arial;
+}
+
+/* header is a flexbox that holds child elements h1, img, and nav */
+header {
+  width: 100%;
+  background-color: rgb(60, 60, 201);
+  color:white;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* these h# items have their own font sizes */
+h1 {
+  font-size: 250%;
+}
+
+h2 {
+  font-size: 225%;
+}
+
+h3 {
+  font-size: 175%;
+}
+
+/* holds h1 and img and is a flexbox */
+.name-photo {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  width: 50%;
+  align-items: center;
+  padding: 2%;
+  gap: 5%;
+}
+
+.name-photo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 0 -5px;
+  border-width: thin;
+  border-color: black;
+  border-style: solid;
+}
+
+header nav {
+  width: 50%;
+}
+
+/* holds the unordered list in the nav that is a flexbox, list of links to different parts of the page */
+header nav ul {
+  height: 100%;
+  width: 100%; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5%;
+  padding: 2%;
+}
+
+/* links have a border and the link colors are white, also they dont have a decoration */
+header a {
+  color: white;
+  text-decoration: none;
+  border-bottom: solid;
+  border-color: white;
+  border-width: thin;
+  padding-bottom: 2%;
+}
+
+/* creates the background image that adds no content to the page, is only for decorational purposes */
+.banner {
+  width: 100%;
+  background-image: url("./assets/images/stars-background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: yellow;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 2%;
+}
+
+main {
+  width: 100%;
+  background-color: white;
+  color: rgb(60, 60, 201);
+}
+
+/* this section is a flexbox that holds the h2 and paragraph elements */
+.about-me {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 2%;
+  gap: 11%;
+}
+
+.about-me h2 {
+  max-height: 100%;
+  max-width: 5%;
+  padding-left: 10%;
+}
+
+.about-me p {
+  height: 100%;
+  max-width: 75%;
+  border-left: solid;
+  border-width: thick;
+  border-color: rgb(60, 60, 201);
+  padding-left: 2%;
+  color: black;
+  font-size: 125%;
+  line-height: normal;
+
+}
+
+/* this is my work section that is a flex box and holds all my assignments and an h2 element */
+.work { 
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2%;
+  gap: 11%;
+}
+
+.work h2 {
+  max-width: 5%;
+  padding-left: 10%;
+}
+
+.work nav {
+  max-width: 75%;
+  border-left: solid;
+  border-width: thick;
+  border-color: rgb(60, 60, 201);
+  padding-left: 2%;
+}
+
+/* the unordered list part that holds the links to all my assinments is a flexbox
+it makes placing the links easier on the page and the wrap will make the elements go to the next page
+if there is not enough space in the horizontal part of the page */
+.work nav ul {
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+/* this is the title tag of the first assingment link, position is relative so that I can then 
+create an absolute position with coordinates for it */
+#name1 {
+  position: relative;
+  color: white;
+}
+
+/* creates a title that comes after the link that can be seen and has an absolute position */
+#name1::after {
+  content: "Horiseon HTML & CSS";
+  position: absolute;
+  left: 0px;
+  bottom: 24px;
+  max-width: 15%;
+  border: thin #aaaaaa solid;
+  background-color:rgb(60, 60, 201);
+  padding: 1.25%;
+  color: #fff;
+  font-size: 80%;
+}
+
+#link1 {
+  width: 100%;
+  margin-bottom: 2%;
+  border-width: thick;
+  border-color: black;
+  border-style: solid;
+}
+
+/* when hovering over the assignment link, you can see that the opacity changes to show you, you 
+have hovered over it */
+#link1:hover {
+  opacity: .7;
+}
+
+/* shows the size of the image of the assignment */
+#project1 {
+  width: 100%;
+  height: 100%;
+}
+
+/* this is the title tag of the second assingment link, position is relative so that I can then 
+create an absolute position with coordinates for it */
+#name2 {
+  position: relative;
+  color: white;
+}
+
+/* creates a title that comes after the link that can be seen and has an absolute position */
+#name2::after {
+  content: "Title1";
+  position: absolute;
+  left: 0px;
+  bottom: 24px;
+  max-width: 200px;
+  border: 1px #aaaaaa solid;
+  background-color:rgb(60, 60, 201);
+  padding: 12px;
+  color: #fff;
+  font-size: 80%;
+}
+
+#link2 {
+  width: 49%;
+  margin: 0 2% 2% 0;
+  border-width: thick;
+  border-color: black;
+  border-style: solid;
+}
+
+/* when hovering over the assignment link, you can see that the opacity changes to show you, you 
+have hovered over it */
+#link2:hover {
+  opacity: .7;
+}
+
+/* shows the size of the image of the assignment */
+#project2 {
+  width: 100%;
+  height: 100%;
+}
+
+/* this is the title tag of the third assingment link, position is relative so that I can then 
+create an absolute position with coordinates for it */
+#name3 {
+  position: relative;
+  color: white;
+}
+
+/* creates a title that comes after the link that can be seen and has an absolute position */
+#name3::after {
+  content: "Title2";
+  position: absolute;
+  left: 0px;
+  bottom: 24px;
+  max-width: 200px;
+  border: 1px #aaaaaa solid;
+  background-color:rgb(60, 60, 201);
+  padding: 12px;
+  color: #fff;
+  font-size: 80%;
+}
+
+#link3 {
+  margin-bottom: 2%;
+  width: 49%;
+  border-width: thick;
+  border-color: black;
+  border-style: solid;
+}
+
+/* when hovering over the assignment link, you can see that the opacity changes to show you, you 
+have hovered over it */
+#link3:hover {
+  opacity: .7;
+}
+
+/* shows the size of the image of the assignment */
+#project3 {
+  width: 100%;
+  height: 100%;
+}
+
+/* this is the title tag of the fourth assingment link, position is relative so that I can then 
+create an absolute position with coordinates for it */
+#name4 {
+  position: relative;
+  color: white;
+}
+
+/* creates a title that comes after the link that can be seen and has an absolute position */
+#name4::after {
+  content: "Title3";
+  position: absolute;
+  left: 0px;
+  bottom: 24px;
+  max-width: 200px;
+  border: 1px #aaaaaa solid;
+  background-color:rgb(60, 60, 201);
+  padding: 12px;
+  color: #fff;
+  font-size: 80%;
+}
+
+#link4 {
+  width: 49%;
+  margin: 0 2% 2% 0;
+  border-width: thick;
+  border-color: black;
+  border-style: solid;
+}
+
+/* when hovering over the assignment link, you can see that the opacity changes to show you, you 
+have hovered over it */
+#link4:hover {
+  opacity: .7;
+}
+
+/* shows the size of the image of the assignment */
+#project4 {
+  width: 100%;
+  height: 100%;
+}
+
+/* this is the title tag of the fifth assingment link, position is relative so that I can then 
+create an absolute position with coordinates for it */
+#name5 {
+  position: relative;
+  color: white;
+}
+
+/* creates a title that comes after the link that can be seen and has an absolute position */
+#name5::after {
+  content: "Title4";
+  position: absolute;
+  left: 0px;
+  bottom: 24px;
+  max-width: 200px;
+  border: 1px #aaaaaa solid;
+  background-color:rgb(60, 60, 201);
+  padding: 12px;
+  color: #fff;
+  font-size: 80%;
+}
+
+#link5 {
+  margin-bottom: 2%;
+  width: 49%;
+  border-width: thick;
+  border-color: black;
+  border-style: solid;
+}
+
+/* when hovering over the assignment link, you can see that the opacity changes to show you, you 
+have hovered over it */
+#link5:hover {
+  opacity: .7;
+}
+
+/* shows the size of the image of the assignment */
+#project5 {
+  width: 100%;
+  height: 100%;
+}
+
+/* holds contact info and is a flexbox that holds that info and the h2 element */
+footer {
+  width: 100%;
+  margin-top: 1%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2%;
+  gap: 11%;
+  background-color: white;
+  color: rgb(60, 60, 201);
+}
+
+footer h2 {
+  max-width: 5%;
+  padding-left: 10%;
+}
+
+footer p {
+  border-bottom: solid;
+  border-width: thin;
+  border-color: black;
+  padding-bottom: 1%;
+}
+
+footer a {
+  text-decoration: none;
+  border-bottom: solid;
+  border-width: thin;
+  border-color: black;
+  padding-bottom: 1%;
+}
+
+/* flexbox that helps place the contacts in the footer element */
+.contacts {
+  width: 75%;
+  border-left: solid;
+  border-width: thick;
+  border-color: rgb(60, 60, 201);
+  padding-left: 2%;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 125%;
+}
+
+/* this is responsive design that makes the titles of each section in main centered and the content spread more across the page at 1350 px
+and below */
+@media screen and (max-width: 1350px) {
+  /* block means that the elements of this section will be stacked  */
+  .about-me {
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 2%;
+  }
+
+  .about-me h2 {
+      margin-bottom: 2%;
+      max-width: 100%;
+      padding: 0;
+  }
+
+  .about-me p {
+      max-width: 100%;
+      text-align: center;
+  }
+
+  .work { 
+      display: block;
+      text-align: center;
+      margin-bottom: 2%;
+  }
+
+  .work nav {
+      max-width: 100%;
+  }
+
+  .work h2 {
+      max-width: 100%;
+      padding: 0;
+      margin-bottom: 2%;
+  }
+
+  footer {
+      display: block;
+      text-align: center;
+  }
+
+  footer h2 {
+      max-width: 100%;
+      padding: 0;
+      margin-bottom: 2%;
+  }
+
+  .contacts {
+      width: 100%;
+      justify-content: space-around;
+  }
+  
+}
+
+/* the header is a block, so each element will stack, also the name and photo will be centered on the header at 725px and below */
+@media screen and (max-width: 775px) {
+  header {
+      display: block;
+  }
+
+  .name-photo {
+      width: 100%;
+      justify-content: center;
+  }
+
+  header nav {
+      width: 100%;
+  }
+
+  header nav ul {
+      justify-content: space-around;
+  }
+
+  /* the flexbox direction will be column, so the assignment links will be stacked */
+  .work nav ul {
+      display:flex;
+      flex-direction: column;
+  }
+
+  #link1 {
+      width: 100%;
+  }
+
+  #link2 {
+      width: 70%;
+  }
+
+  #link3 {
+      width: 70%;
+      margin-bottom: 2%;
+  }
+
+  #link4 {
+      width: 70%;
+      margin-bottom: 2%;
+  }
+
+  #link5 {
+      width: 70%;
+  }
+}
+
+/* the contacts part of the footer element will have the flexbox direction become a column so that
+the different contacts will stack when the pixels are 550 and below */
+@media screen and (max-width: 550px) {
+  .contacts {
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  footer p {
+      border-bottom: none;
+  }
+  
+  footer a {
+      text-decoration: none;
+      border-bottom: none;
+  }
+}
